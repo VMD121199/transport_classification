@@ -4,8 +4,7 @@ from tensorflow.keras.layers import Input, Dense, Conv2D, Flatten, Dropout, MaxP
 
 
 class CnnModel:
-    def __init__(self, input_shape, num_of_class=1, method="softmax",
-                 loss_function="categorical_crossentropy", optimization_method="adam"):
+    def __init__(self, input_shape, num_of_class=1, method="softmax"):
         input_tensor = Input(input_shape)
 
         x = input_tensor
@@ -29,7 +28,3 @@ class CnnModel:
             x = layer(x)
 
         self.model = Model(inputs=input_tensor, outputs=x)
-
-    def load_model(self):
-        model = self.model
-        return model
