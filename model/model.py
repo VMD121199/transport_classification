@@ -29,3 +29,7 @@ class CnnModel:
             x = layer(x)
 
         self.model = Model(inputs=input_tensor, outputs=x)
+
+    def load_model(self):
+        model = self.model
+        return model
