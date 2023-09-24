@@ -1,9 +1,11 @@
-import os, random, shutil
+# Becareful when using this. Only run 1 time for split dataset to train, validation and test
+# UNCOMMENT THE CODE BELOW:
+# import os, random, shutil
 
-dir_path = "./data//train/Bicycle"
-destination_path = "./data/test/Bicycle"
+# dir_path = "./data//validation/Bicycle"
+# destination_path = "./data/train/Bicycle"
 
-filenames = random.sample(os.listdir(dir_path), 400)
-for fname in filenames:
-    srcpath = os.path.join(dir_path, fname)
-    shutil.move(srcpath, destination_path)
+# filenames = random.sample(os.listdir(dir_path), 200)
+# for fname in filenames:
+#     srcpath = os.path.join(dir_path, fname)
+#     shutil.move(srcpath, destination_path)
