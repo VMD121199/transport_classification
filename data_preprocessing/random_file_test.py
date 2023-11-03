@@ -1,13 +1,17 @@
 import os
 import random
 
-# Directory where images are stored
+# Image Directory
 directory = "./data/test/transportation"
 
 # List all jpg files
-image_files = [f for f in os.listdir(directory) if f.endswith('.jpg')]
+image_files = [
+    f
+    for f in os.listdir(directory)
+    if f.endswith(".jpg") or f.endswith(".png")
+]
 # sort based on integer before '.jpg'
-image_files.sort(key=lambda x: int(x.split('.')[0]))
+image_files.sort(key=lambda x: int(x.split(".")[0]))
 
 # Shuffle the list
 random.shuffle(image_files)
@@ -20,7 +24,7 @@ for idx, filename in enumerate(image_files):
     os.rename(old_path, new_path)
 
 # List all temporary files and shuffle
-temp_files = [f for f in os.listdir(directory) if f.startswith('temp_')]
+temp_files = [f for f in os.listdir(directory) if f.startswith("temp_")]
 random.shuffle(temp_files)
 
 # Rename each temporary file to a new index

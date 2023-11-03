@@ -1,7 +1,0 @@
-TODO List(25/9/2023):
-
-- [ ] Complete test.py
-- [ ] Complete helpers.py
-- [ ] Restructure main.py (move all training functions to trainer/train.py)
-- [ ] Update README.md with setup instructions, dataset preparation, training initiation, etc.
-- [ ] Reorganize all files upon completion
